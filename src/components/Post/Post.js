@@ -15,4 +15,4 @@ const post = (props) => {
     </article>
 };
 
-export default withRouter(post);
+export default post;
