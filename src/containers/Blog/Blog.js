@@ -21,7 +21,7 @@ class Blog extends Component {
                                 activeStyle={{
                                     color: '#fa923f',
                                     textDecoration: 'underline'
-                                }}>Home</NavLink></li>
+                                }}>Posts</NavLink></li>
                             <li><NavLink to = {{
                                 pathname:'/new-post',
                                 hash: '#submit',
@@ -32,8 +32,9 @@ class Blog extends Component {
                 </header>
                 {/* <Route path = "/" exact render={ () => <h1>Home1</h1>}/>
                 <Route path = "/"  render={ () => <h1>Home2</h1>}/> */}
+                <Route path="/" exact component={Posts}/>
                 <Switch>
-                    <Route path="/" exact component={Posts}/>
+                    
                     <Route path="/new-post" component={NewPost}/>
                     <Route path="/:id" exact component={FullPost}/>
                 </Switch>
